@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Django Template Language</h1>
+    {% comment %} <h2>Variable</h2> {% endcomment %}
+    {% comment %}Example 1 -- variable{% endcomment %}
+    {% comment %} <h2>Name: {{name}}</h2> {% endcomment %}
+    {% comment %} <h3>Name:{{name}}</h3>
+    <h3>Duration:{{duration}}</h3>
+    <h3>seats:{{seats}}</h3> {% endcomment %}
+
+
+    {% comment %} <h2>Filters</h2>
+    <h2>Name: {{name | upper}}</h2>
+    <h2>Desc: {{desc|truncatewords:4}}</h2>
+    <h2>Desc: {{desc|upper | truncatewords:4}}</h2>
+
+    <h3>{{name|lower}}</h3>
+    <h3>{{name|capfirst}}</h3>
+    <h3>{{name|default:'nothing'}}</h3>
+    <h3>{{name|length}}</h3>
+    <h3>{{name|slice:"2"}}</h3>
+    <h3>{{name|truncatechars:3}}</h3> {% endcomment %}
+
+    {% comment %} <h2>Datetime</h2>
+    <h3>{{date}}</h3>
+    <h3>{{date| date}}</h3>
+    <h3>{{date| date:"D d M Y"}}</h3>
+    <h3>{{date| time}}</h3>
+    <h3>{{date| date:'SHORT_DATE_FORMAT'}}</h3>
+    <h3>{{date| time:'TIME_FORMAT'}}</h3> {% endcomment %}
+
+    {% comment %} <h2>Float format</h2>
+    <h3>{{p1}}</h3>
+    <h3>{{p2}}</h3>
+    <h3>{{p3}}</h3>
+    
+    <h3>{{p1|floatformat}}</h3>
+    <h3>{{p2|floatformat}}</h3>
+    <h3>{{p3|floatformat}}</h3>
+
+    <h3>{{p1|floatformat:3}}</h3>
+    <h3>{{p2|floatformat:3}}</h3>
+    <h3>{{p3|floatformat:3}}</h3>
+
+     <h3>{{p1|floatformat:0}}</h3>
+    <h3>{{p2|floatformat:0}}</h3>
+    <h3>{{p3|floatformat:0}}</h3> {% endcomment %}
+
+    {% comment %} <h2>If Tag</h2> {% endcomment %}
+    {% comment %} {% if nm %}
+    <h3>Hello If Tag</h3>
+    {% endif %} {% endcomment %}
+
+    {% comment %} {% if nm %}
+    <h3>Hello {{nm}} If Tag</h3>
+    {% endif %} {% endcomment %}
+
+     {% comment %} {% if nm and st %}
+    <h3>Name: {{nm}} Seats : {{st}}</h3>
+    {% endif %} {% endcomment %}
+
+    {% comment %} {% if nm or st %}
+    <h3>Name: {{nm}} Seats : {{st}}</h3>
+    {% endif %}  {% endcomment %}
+
+     {% comment %} {% if not  nm  %}
+    <h3>Name: {{nm}}</h3>
+    {% endif %} {% endcomment %}
+
+      {% comment %} {% if nm == 'Django'  %}
+    <h3>Name: {{nm}}</h3>
+    {% endif %} {% endcomment %}
+{% comment %} 
+    {% if nm|length >= 4   %}
+    <h3>Name: {{nm}}</h3>
+    {% endif %} {% endcomment %}
+
+    {% comment %} <h2>If  Else Tag</h2> {% endcomment %}
+
+     {% comment %} {% if nm == 'Django'  %}
+    <h3>Name: {{nm}}</h3>
+    {% else %}
+    <h3>Name:  None</h3>
+    {% endif %} {% endcomment %}
+
+    {% comment %} {% if nm  %}
+    <h3>Name: {{nm}}</h3>
+    {% elif st %}
+    <h3>Seat:  {{st}}</h3>
+    {% else %}
+    <h3>None</h3>
+    {% endif %} {% endcomment %}
+
+
+    <h2>For Loopg</h2>
+    {% comment %} <ul>
+        {% for name in names  %}
+        <li>{{name}}</li>
+        {% endfor %}
+    </ul> {% endcomment %}
+    {% comment %} <ul>
+        {% for name in names reversed  %}
+        <li>{{name}}</li>
+        {% endfor %}
+    </ul> {% endcomment %}
+
+     <ul>
+        {% for name in names%}
+        {{forloop.counter}}.{{name}}<br>
+        {% endfor %}
+    </ul>
+</body>
+</html>

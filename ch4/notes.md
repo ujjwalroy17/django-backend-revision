@@ -28,8 +28,29 @@ Example:
 ### 2\. Project Structure with Multiple Apps
 
 When multiple apps are created, the project structure looks like this:
-```pgsql
-`project_root/ │ ├── app1/ │   ├── migrations/ │   ├── admin.py │   ├── apps.py │   ├── models.py │   ├── tests.py │   └── views.py │ ├── app2/ │   ├── migrations/ │   ├── admin.py │   ├── apps.py │   ├── models.py │   ├── tests.py │   └── views.py │ ├── project_name/ │   ├── settings.py │   ├── urls.py │   ├── asgi.py │   └── wsgi.py │ └── manage.py`
+```plaintext
+project_root/
+├── app1/
+│   ├── migrations/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── app2/
+│   ├── migrations/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── project_name/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+  
+└── wsgi.py 
+└─ manage.py`
 ```
 Each app has its **own views, models, and logic**, but all apps are controlled by a **single project**.
 
@@ -50,8 +71,13 @@ Without registration, Django will not recognize the app.
 Each app defines its own views inside its `views.py`.
 
 #### Example: app1/views.py
-
-`from django.http import HttpResponse  def home(request):     return HttpResponse("Home Page")  def myapp1(request):     return HttpResponse("My App 1 Page")`
+```python
+from django.http import HttpResponse  
+def home(request):     
+   return HttpResponse("Home Page")  
+def myapp1(request):     
+   return HttpResponse("My App 1 Page")
+```
 
 #### Example: app2/views.py
 
