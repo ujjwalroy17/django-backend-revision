@@ -1,0 +1,11 @@
+{% extends "app1/base.html" %}
+{% load static %}
+
+{% block title %} Django {% endblock title %}
+
+
+{% block content %}
+<h1>Django Page</h1>
+{% endblock content %}
+
+{% block footer %} {{block.super}}  this is Django footer{% endblock footer %}

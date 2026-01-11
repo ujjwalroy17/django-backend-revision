@@ -1,0 +1,12 @@
+{% extends "app1/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+<h1>Home Page</h1>
+{% bootstrap_button button_type="submit" content="OK" %}
+{% bootstrap_button button_type="reset" content="Cancel" %}
+{% endblock content %}
+
+{% block footer %}this is a home foooter{% endblock footer %}

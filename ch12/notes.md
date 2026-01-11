@@ -42,16 +42,16 @@ The base template defines:
     {% block corecss %}
     <link rel="stylesheet" href="{% static "app1/css/style.css" %}">
     {% endblock corecss %}
-</head>ody>
+</head><body>
     
     <ul>
         <li>Home</li>
         <li>Django</li>
         <li>Python</li>
     </ul>
-    														   	   	   	   	   	   	   	   	   	   {% block content %}{% endblock content %}
-dd     {% block footer %}
-        this is a footer
+    {% block content %}{% endblock content %}
+    {% block footer %}
+    this is a footer
     {% endblock footer %}
 </body>
 html>
