@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "main/css/main.css" %}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    {% block navbar %}
+    {% include "core/components/navbar.html" %}
+    {% endblock navbar %}
+    {% block hero %}{% endblock hero %}
+    {% block mainconetent %}{% endblock mainconetent %}
+    {% block footer %}{% endblock footer %}
+</body>
+</html>
