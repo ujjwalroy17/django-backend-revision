@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registeration Form:</h1>
+    {% comment %} Complete form at once {% endcomment %}
+    {% comment %} <form action="">
+        {{form}}
+        <input type="submit" value="submit">
+    </form> {% endcomment %}
+
+    {% comment %} form field by field {% endcomment %}
+    {% comment %} <form action="">
+        First Name:{{form.first_name}}
+        last Name:{{form.last_name}}
+    </form> {% endcomment %}
+
+    {% comment %} formlabel & input by field {% endcomment %}
+    {% comment %} <form action="">
+        {{form.first_name.label_tag}}{{form.first_name}}
+        {{form.last_name.label_tag}}{{form.last_name}}
+    </form> {% endcomment %}
+
+     {% comment %} form label & input by label & Input {% endcomment %}
+    {% comment %} <form action="">
+       <label for="{{form.first_name.id_for_label}}">First  Name</label>{{form.first_name}}
+        <label for="{{form.last_name.id_for_label}}">last  Name</label>{{form.last_name}}
+    </form> {% endcomment %}
+
+    <form action="">
+       <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label>{{form.first_name}}
+        <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label>{{form.last_name}}
+    </form>
+</body>
+</html>
