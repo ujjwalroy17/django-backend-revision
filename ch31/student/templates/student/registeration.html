@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registeration Form</h1>
+    <form action="" method='post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    {% if messages %}
+    {% for message in messages  %}
+    <span class="{{message.tags}}">{{message}}</span>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
