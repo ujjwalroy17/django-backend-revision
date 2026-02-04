@@ -1,0 +1,27 @@
+from django.core.cache import cache
+
+cache.set(key, value, timeout=DEFAULT_TIMEOUT, version=None)
+
+cache.get(key, default=None, version=None)
+
+cache.add(key, value, timeout=DEFAULT_TIMEOUT, version=None) 
+
+cache.get_or_set(key, default, timeout=DEFAULT_TIMEOUT, version=None) 
+
+cache.set_many(dict, timeout)
+
+cache.get_many(keys, version=None)
+
+cache.delete(key, version=None) 
+
+cache.delete_many(keys, version=None)
+
+cache.clear()
+
+cache.touch(key, timeout=DEFAULT_TIMEOUT, version=None)
+
+cache.incr(key, delta=1, version=None) 
+
+cache.decr(key, delta=1, version=None)
+
+cache.close()
